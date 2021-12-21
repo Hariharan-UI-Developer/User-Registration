@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Welcome {{registrationDetails[0].userName}}</mat-card-title>
+    <mat-card-subtitle>Check your details</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" class="mat-list-item">Name: {{ registrationDetails[0].userName }}</mat-list-item>
+      <mat-list-item role="listitem" class="mat-list-item">Mobile-Number: {{ registrationDetails[0].mobileNumber }}</mat-list-item>
+      <mat-list-item role="listitem" class="mat-list-item">E-mail: {{ registrationDetails[0].email }}</mat-list-item>
+      <mat-list-item role="listitem" class="mat-list-item">Password: {{ registrationDetails[0].password }}</mat-list-item>
+    </mat-list>
+    <mat-card-actions class="mat-card-actions">
+      <button class="button edit-button" (click)="onEditClick()">Edit</button>
+      <button class="button delete-button" (click)="onDeleteClick()">Delete</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+

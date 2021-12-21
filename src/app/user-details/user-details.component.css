@@ -1,0 +1,28 @@
+
+
+.mat-list-item {
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.mat-card-actions {
+  text-align: center;
+}
+
+.button {
+  border: none;
+  font-size: 18px;
+}
+
+.edit-button {
+  background-color: #c5b505;
+  color: #ffffff;
+}
+
+.delete-button {
+  margin-left: 5%;
+  background-color: #c70f1b;
+  color: #ffffff;
+}

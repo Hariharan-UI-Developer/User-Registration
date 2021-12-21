@@ -1,0 +1,72 @@
+<header>
+  <div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />
+    <span>Welcome</span>
+    </div>
+</header>
+
+<div>
+  <form [formGroup]="registrationForm" class="form-class">
+    <mat-form-field class="form-field-class">
+      <input type="text"
+             placeholder="Name"
+             class="inputs"
+             formControlName="userName"
+             matInput>
+      <mat-error *ngIf="!registrationForm.get('userName')?.valid"
+                 class="mat-error">
+                 userName is not valid
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field-class">
+      <input type="number"
+             placeholder="Mobile-Number"
+             class="inputs"
+             formControlName="mobileNumber"
+             matInput>
+      <mat-error *ngIf="!registrationForm.get('mobileNumber')?.valid"
+                 class="mat-error">
+                 mobileNumber is not valid
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field-class">
+      <input type="email"
+             placeholder="E-mail"
+             class="inputs"
+             formControlName="email"
+             matInput>
+      <mat-error *ngIf="!registrationForm.get('email')?.valid"
+                 class="mat-error">
+                 e-mail is not valid or already taken
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field-class">
+      <input type="password"
+             placeholder="Password"
+             class="inputs"
+             formControlName="password"
+             matInput>
+      <mat-error *ngIf="!registrationForm.get('password')?.valid"
+                 class="mat-error">
+                 Password should have atleast 6 characters
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field-class">
+      <input type="password"
+             placeholder="Confirm-Password"
+             class="inputs"
+             formControlName="confirmPassword"
+             matInput>
+      <mat-error *ngIf="passwordIncorrect"
+                 class="mat-error">
+                 Confirm Password should match Password
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+  <button (click)="onClick()" [disabled]="!registrationForm.valid || passwordIncorrect">Click</button>
+</div>

@@ -1,0 +1,28 @@
+.content-container {
+  margin-top: 15%;
+}
+
+.div-container {
+  text-align: center;
+}
+
+.p-class {
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: brown;
+  font-weight: bold;
+}
+
+.register-Button {
+  background-color: #15346b;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+}
+
+.login-Button {
+  background-color: #759844;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+}

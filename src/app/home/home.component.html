@@ -1,0 +1,11 @@
+<div class="content-container">
+  <div *ngIf="openRegistrationPage" class="div-container">
+    <p class="p-class">New User?</p>
+    <button (click)="onRegister()" class="register-Button">Register Here</button>
+  </div>
+  <div *ngIf="openLoginPage" class="div-container">
+    <p class="p-class">Already have an account?</p>
+    <button (click)="onLogin()" class="login-Button">Login</button>
+  </div>
+</div>
+

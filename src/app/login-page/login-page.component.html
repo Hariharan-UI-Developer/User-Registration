@@ -1,0 +1,46 @@
+<header>
+  <div class="toolbar" role="banner">
+    <span>Login</span>
+    </div>
+</header>
+
+
+<div>
+  <form [formGroup]="loginForm" class="form-class">
+    <mat-form-field appearance="fill" class="form-field-class">
+      <!-- <mat-label >e-mail/user-name</mat-label> -->
+      <input type="email"
+             class="inputs"
+             placeholder="e-mail"
+             matInput
+             formControlName="email">
+      <mat-error *ngIf="(!loginForm.get('email')?.valid &&
+                        loginForm.get('email')?.touched)"
+                 class="mat-error">
+                  Your Password is not valid
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field-class">
+      <!-- <label>Password</label> -->
+      <input type="password"
+             class="inputs"
+             placeholder="Password"
+             matInput
+             formControlName="password"
+             >
+      <mat-error *ngIf="!loginForm.get('password')?.valid &&
+                        loginForm.get('password')?.touched"
+                 class="mat-error">
+                 Your Password is not valid
+      </mat-error>
+    </mat-form-field>
+    <div class="login-button-container">
+      <button color="primary"
+              class="login-button"
+              (click)="onLogin()"
+              expand="block"
+              [disabled]="!loginForm.valid">Login
+      </button>
+    </div>
+  </form>
+</div>

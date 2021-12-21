@@ -1,0 +1,45 @@
+.toolbar {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.form-class {
+  width: 100%;
+}
+
+.form-field-class {
+  margin-top: 5%;
+  display: block;
+  width: 100%;
+}
+
+.inputs {
+  font-size: 18px;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+}
+
+.mat-error {
+  color: red;
+}
+
+.login-button-container{
+  margin-top: 10%;
+  text-align: center;
+}
+
+.login-button {
+  background-color: brown;
+  color: #ffffff;
+  width: 80%;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
